@@ -1,32 +1,36 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/SectionHeader";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Clients – KSM Keucheyan Sports Management",
-  description: "KSM represents elite professional basketball players across the NBA, EuroLeague, ACB, and leagues worldwide.",
-};
 
 const clients = [
-  { name: "Yanic Konan Niederhauser", team: "Los Angeles Clippers", league: "NBA", flag: "🇺🇸" },
-  { name: "Chris Manon", team: "Los Angeles Lakers", league: "NBA", flag: "🇺🇸" },
-  { name: "Chris Jones", team: "Hapoel Tel-Aviv", league: "EuroLeague", flag: "🇮🇱" },
-  { name: "Otis Livingston", team: "Girona", league: "ACB", flag: "🇪🇸" },
-  { name: "Michael Forrest", team: "Murcia", league: "ACB", flag: "🇪🇸" },
-  { name: "Ty Nichols", team: "Peristeri", league: "Greek Basketball League", flag: "🇬🇷" },
-  { name: "Christian Vital", team: "Derthona", league: "Italy Lega", flag: "🇮🇹" },
-  { name: "DeAndrere Gholston", team: "Hapoel Gali Elion", league: "Winner League", flag: "🇮🇱" },
-  { name: "Ronald March", team: "Mersin", league: "BSL-BCL Champions League", flag: "🇹🇷" },
-  { name: "Jaizec Lottie", team: "Oradea", league: "FIBA Europe Cup", flag: "🇷🇴" },
-  { name: "Efton Reid III", team: "Kobrat", league: "Korisliiga", flag: "🇫🇮" },
+  { team: "Los Angeles Clippers", league: "NBA", flag: "🇺🇸" },
+  { team: "Los Angeles Lakers", league: "NBA", flag: "🇺🇸" },
+  { team: "Hapoel Tel-Aviv", league: "EuroLeague", flag: "🇮🇱" },
+  { team: "Girona", league: "ACB", flag: "🇪🇸" },
+  { team: "Murcia", league: "ACB", flag: "🇪🇸" },
+  { team: "Peristeri", league: "Greek Basketball League", flag: "🇬🇷" },
+  { team: "Derthona", league: "Italy Lega", flag: "🇮🇹" },
+  { team: "Hapoel Gali Elion", league: "Winner League", flag: "🇮🇱" },
+  { team: "Mersin", league: "BSL-BCL Champions League", flag: "🇹🇷" },
+  { team: "Oradea", league: "FIBA Europe Cup", flag: "🇷🇴" },
+  { team: "Kobrat", league: "Korisliiga", flag: "🇫🇮" },
 ];
 
 const testimonials = [
-  { author: "Chris Jones", quote: "Sevag discovered me while I was playing in Mongolia. I was just a young player with a dream, and he believed in me when almost no one else did. Thanks to his vision, dedication, and tireless work, I made it all the way to the EuroLeague." },
-  { author: "Otis Livingston", quote: "I started working with him in 2022 and I have trusted him since day one. His professionalism is top notch and his communication is always on point." },
-  { author: "Michael Forrest", quote: "Sevag is someone who only wants the best for his players. He put me in a position that has allowed me to continue playing the game that I love at a high level." },
-  { author: "Christian Vital", quote: "Sevag is an agent that is restless. With many connections in Europe and the states he works relentlessly to make sure his guys have jobs and places them where they can succeed." },
+  {
+    author: "Chris Jones",
+    quote: "Sevag discovered me while I was playing in Mongolia. I was just a young player with a dream, and he believed in me when almost no one else did. Thanks to his vision, dedication, and tireless work, I made it all the way to the EuroLeague.",
+  },
+  {
+    author: "Otis Livingston",
+    quote: "I started working with him in 2022 and I have trusted him since day one. His professionalism is top notch and his communication is always on point.",
+  },
+  {
+    author: "Christian Vital",
+    quote: "Sevag is an agent that is restless. With many connections in Europe and the states he works relentlessly to make sure his guys have jobs and places them where they can succeed.",
+  },
 ];
 
 export default function ClientsPage() {
@@ -47,14 +51,15 @@ export default function ClientsPage() {
         </p>
       </div>
 
-      {/* Client cards */}
+      {/* Client cards — names upon request */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <SectionHeader tag="Professional Roster" title="Current Clients" />
-        <div className="mt-10 grid md:grid-cols-2 gap-3">
+        <p className="mt-3 text-sm font-light" style={{ color: "var(--grey)" }}>Player names available upon request.</p>
+        <div className="mt-8 grid md:grid-cols-2 gap-3">
           {clients.map((c, i) => (
             <div
-              key={c.name}
-              className="flex items-center gap-5 px-6 py-5 border transition-all duration-200 group"
+              key={i}
+              className="flex items-center gap-5 px-6 py-5 border transition-all duration-200"
               style={{ background: "var(--navy2)", borderColor: "rgba(255,255,255,0.06)" }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,184,75,0.5)";
@@ -69,9 +74,11 @@ export default function ClientsPage() {
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="flex-1">
-                <div className="font-barlow-condensed font-bold text-lg tracking-wide uppercase">{c.name}</div>
+                <div className="font-barlow-condensed font-bold text-lg tracking-wide uppercase" style={{ color: "var(--light)" }}>
+                  {c.flag} {c.team}
+                </div>
                 <div className="text-xs font-light mt-0.5" style={{ color: "var(--grey)" }}>
-                  {c.flag} {c.team} — {c.league}
+                  {c.league} · Player upon request
                 </div>
               </div>
               <div
@@ -89,7 +96,7 @@ export default function ClientsPage() {
       <section className="px-6 py-24" style={{ background: "var(--navy2)" }}>
         <div className="max-w-6xl mx-auto">
           <SectionHeader tag="In Their Words" title="Client Testimonials" />
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div key={t.author} className="p-8" style={{ background: "var(--navy)", borderTop: "2px solid var(--gold)" }}>
                 <span className="block font-serif leading-none mb-4 opacity-40" style={{ fontSize: "3.5rem", color: "var(--gold)" }}>&ldquo;</span>
