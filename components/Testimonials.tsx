@@ -23,9 +23,9 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="relative overflow-hidden" style={{ background: "var(--navy)" }}>
-      <div ref={ref} className="max-w-6xl mx-auto px-6 py-28">
+      <div ref={ref} className="max-w-6xl mx-auto px-6 py-16">
         <SectionHeader tag="Client Voice" title="Testimonials" />
-        <div className="reveal mt-10 grid md:grid-cols-3 gap-6">
+        <div className="reveal mt-8 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
             <div key={t.author} className="p-8" style={{ background: "var(--navy2)", borderTop: "2px solid var(--gold)" }}>
               <span className="block font-serif leading-none mb-4 opacity-40" style={{ fontSize: "3.5rem", color: "var(--gold)" }}>&ldquo;</span>

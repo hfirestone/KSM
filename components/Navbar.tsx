@@ -2,17 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Clients", href: "/clients" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -34,12 +26,18 @@ export default function Navbar() {
       </Link>
 
       <ul className="hidden md:flex gap-10 list-none">
-        {navLinks.map((link) => (
-          <li key={link.href}>
+        {[
+          { label: "Home", href: "/" },
+          { label: "About", href: "#about" },
+          { label: "Services", href: "#services" },
+          { label: "Clients", href: "#clients" },
+          { label: "Testimonials", href: "#testimonials" },
+        ].map((link) => (
+          <li key={link.label}>
             <Link
               href={link.href}
-              className="text-xs font-semibold tracking-widest uppercase transition-colors duration-200"
-              style={{ color: pathname === link.href ? "var(--gold)" : "var(--light)" }}
+              className="text-xs font-semibold tracking-widest uppercase transition-colors duration-200 hover:text-amber-400"
+              style={{ color: "var(--light)" }}
             >
               {link.label}
             </Link>
@@ -48,7 +46,7 @@ export default function Navbar() {
       </ul>
 
       <a
-        href="/#contact"
+        href="#contact"
         className="hidden md:block text-xs font-semibold tracking-widest uppercase px-5 py-2 transition-colors duration-200"
         style={{ background: "var(--gold)", color: "var(--navy)" }}
         onMouseEnter={(e) => ((e.target as HTMLElement).style.background = "var(--gold2)")}
