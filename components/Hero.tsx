@@ -29,15 +29,9 @@ export default function Hero() {
       </div>
 
       {/* Top-right gold corner */}
-      <div
-        className="absolute top-0 right-0 w-72 h-72 pointer-events-none z-10"
-        style={{ background: "var(--gold)", clipPath: "polygon(100% 0, 100% 40%, 60% 0)" }}
-      />
+      <div className="absolute top-0 right-0 w-72 h-72 pointer-events-none z-10" style={{ background: "var(--gold)", clipPath: "polygon(100% 0, 100% 40%, 60% 0)" }} />
       {/* Bottom-left gold corner */}
-      <div
-        className="absolute bottom-0 left-0 w-72 h-72 pointer-events-none z-10"
-        style={{ background: "var(--gold)", clipPath: "polygon(0 60%, 0 100%, 40% 100%)" }}
-      />
+      <div className="absolute bottom-0 left-0 w-72 h-72 pointer-events-none z-10" style={{ background: "var(--gold)", clipPath: "polygon(0 60%, 0 100%, 40% 100%)" }} />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -61,7 +55,7 @@ export default function Hero() {
         </p>
         <div className="mt-10 flex gap-4 justify-center flex-wrap animate-fadeUp-3">
           <a
-            href="/clients"
+            href="#clients"
             className="clip-btn px-10 py-4 font-barlow-condensed font-bold text-base tracking-widest uppercase transition-all duration-200 hover:-translate-y-0.5"
             style={{ background: "var(--gold)", color: "var(--navy)" }}
           >
@@ -74,23 +68,6 @@ export default function Hero() {
           >
             Work With Us
           </a>
-        </div>
-        <div className="mt-20 flex gap-12 justify-center flex-wrap animate-fadeUp-4">
-          {[
-            { num: "17+", label: "Years Experience" },
-            { num: "11", label: "Active Clients" },
-            { num: "4", label: "Experts on Team" },
-            { num: "NBA", label: "+ Global Leagues" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="font-barlow-condensed font-black leading-none" style={{ fontSize: "2.6rem", color: "var(--gold)" }}>
-                {s.num}
-              </div>
-              <div className="text-xs font-semibold tracking-[0.18em] uppercase mt-1" style={{ color: "var(--grey)" }}>
-                {s.label}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
