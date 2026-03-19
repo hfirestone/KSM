@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,15 +15,23 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 md:px-16 py-5 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 md:px-16 py-4 transition-all duration-300"
       style={{
         background: scrolled ? "rgba(15,22,35,0.97)" : "rgba(15,22,35,0.85)",
         backdropFilter: "blur(8px)",
         borderBottom: "1px solid rgba(232,184,75,0.12)",
       }}
     >
-      <Link href="/" className="font-barlow-condensed font-black text-3xl tracking-widest text-white hover:text-amber-400 transition-colors">
-        KSM
+      {/* Logo image */}
+      <Link href="/">
+        <Image
+          src="/logo.jpg"
+          alt="KSM – Keucheyan Sports Management"
+          width={80}
+          height={40}
+          className="object-contain invert"
+          style={{ filter: "invert(1)" }}
+        />
       </Link>
 
       <ul className="hidden md:flex gap-10 list-none">
