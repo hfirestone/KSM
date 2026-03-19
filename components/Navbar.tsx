@@ -29,8 +29,6 @@ export default function Navbar() {
           alt="KSM – Keucheyan Sports Management"
           width={80}
           height={40}
-          className="object-contain invert"
-          style={{ filter: "invert(1)" }}
         />
       </Link>
 
