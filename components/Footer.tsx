@@ -10,7 +10,6 @@ export default function Footer() {
           width={100}
           height={50}
           className="object-contain"
-          style={{ filter: "invert(1)" }}
         />
       </div>
       <div className="text-xs font-semibold tracking-[0.3em] uppercase mb-6" style={{ color: "var(--grey)" }}>
