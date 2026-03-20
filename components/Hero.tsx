@@ -4,24 +4,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden px-6 pt-40 pb-16"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden px-6 pt-24 pb-16"
       style={{ background: "var(--navy)" }}
     >
-      {/* Background radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,184,75,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,184,75,0.07) 0%, transparent 70%)",
         }}
       />
-
-      {/* Top-right gold corner */}
       <div className="absolute top-0 right-0 w-72 h-72 pointer-events-none z-10" style={{ background: "var(--gold)", clipPath: "polygon(100% 0, 100% 40%, 60% 0)" }} />
-      {/* Bottom-left gold corner */}
       <div className="absolute bottom-0 left-0 w-72 h-72 pointer-events-none z-10" style={{ background: "var(--gold)", clipPath: "polygon(0 60%, 0 100%, 40% 100%)" }} />
 
-      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <p className="text-xs font-bold tracking-[0.3em] uppercase mb-6 animate-fadeUp" style={{ color: "var(--gold)" }}>
           Keucheyan Sports Management
