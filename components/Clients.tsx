@@ -46,7 +46,7 @@ export default function Clients() {
             className="text-sm font-light tracking-widest uppercase"
             style={{ color: "var(--grey)" }}
           >
-            Players available upon request
+            Client list available upon request
           </p>
         </div>
 
