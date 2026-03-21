@@ -17,14 +17,62 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "KSM – Keucheyan Sports Management",
+  title: "KSM – Keucheyan Sports Management | Elite Basketball Agency",
   description:
-    "Elite basketball representation across the NBA, EuroLeague & beyond. Founded in 2008, KSM is big enough to win, small enough to care.",
-  keywords: ["basketball agent", "sports management", "NBA", "EuroLeague", "KSM", "Keucheyan"],
+    "Keucheyan Sports Management (KSM) is a boutique basketball agency founded in 2008, representing elite professional players across the NBA, EuroLeague, ACB, and leagues worldwide. Big enough to win, small enough to care.",
+  keywords: [
+    "basketball agent",
+    "sports management",
+    "NBA agent",
+    "EuroLeague agent",
+    "basketball representation",
+    "KSM",
+    "Keucheyan Sports Management",
+    "Sevag Keucheyan",
+    "professional basketball",
+    "sports agency",
+    "basketball contract negotiation",
+    "athlete representation",
+  ],
+  authors: [{ name: "Keucheyan Sports Management" }],
+  creator: "Keucheyan Sports Management",
+  metadataBase: new URL("https://www.ksmbasketball.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "KSM – Keucheyan Sports Management",
-    description: "Big Enough to Win, Small Enough to Care.",
     type: "website",
+    url: "https://www.ksmbasketball.com",
+    title: "KSM – Keucheyan Sports Management | Elite Basketball Agency",
+    description:
+      "A boutique basketball agency representing elite professional players across the NBA, EuroLeague, and leagues worldwide. Founded in 2008 by Sevag Keucheyan.",
+    siteName: "Keucheyan Sports Management",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KSM – Keucheyan Sports Management",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KSM – Keucheyan Sports Management | Elite Basketball Agency",
+    description:
+      "A boutique basketball agency representing elite professional players across the NBA, EuroLeague, and leagues worldwide.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
