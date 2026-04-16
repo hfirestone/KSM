@@ -5,8 +5,8 @@ import SectionHeader from "./SectionHeader";
 
 const testimonials = [
   {
-    author: "Chris Jones",
-    quote: "Sevag discovered me while I was playing in Mongolia. I was just a young player with a dream, and he believed in me when almost no one else did. Since then, he has guided me step by step throughout my career. Thanks to his vision, dedication, and tireless work, I made it all the way to the EuroLeague — something I never thought possible. I will always be deeply grateful to him for believing in me.",
+    author: "Yanic Konan Niederhauser, LA Clippers",
+    quote: "From the moment he recruited me out of Germany, he believed in me in a way very few people did. I still remember the first time I met him — in that moment, my dream of going to the U.S. and making it to the NBA stopped feeling like a dream and became something real I could actually achieve.From day one, we had a clear understanding: I take care of the basketball, and he takes care of the business. And he’s done exactly that. Sevag is a hard worker who consistently creates opportunities, opens doors, and makes sure everything off the court is handled with precision and purpose. What separates him is his vision and consistency. He doesn’t just react — he builds, plans, and stays ahead. At the same time, he keeps me accountable and pushes me to stay focused and continue growing even now that I’m in the NBA. Our relationship has become more than just business. It’s built on trust, loyalty, and a shared belief in the bigger picture. I’m grateful for everything he’s done for me, and for the role he continues to play in my career.",
   },
   {
     author: "Otis Livingston",
